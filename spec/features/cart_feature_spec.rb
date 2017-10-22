@@ -83,7 +83,7 @@ describe 'Feature Test: Cart', :type => :feature do
       end
 
       it "Creates a current_cart when adding first item " do
-        first_item = Item.first
+        first_item = Item.second
         @user.current_cart = nil
         @user.save
         visit store_path
@@ -95,7 +95,7 @@ describe 'Feature Test: Cart', :type => :feature do
       end
 
       it "Uses the same cart when adding a second item" do
-        first_item = Item.first
+        first_item = Item.second
         second_item = Item.second
         @user.current_cart = nil
         @user.save
@@ -117,7 +117,7 @@ describe 'Feature Test: Cart', :type => :feature do
       end
 
       it "Adds the item to the cart" do
-        first_item = Item.first
+        first_item = Item.second
         @user.current_cart = nil
         @user.save
         visit store_path

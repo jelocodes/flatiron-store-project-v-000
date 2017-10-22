@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.first
+    @user = User.create(name: "Fiasco", password: "password", email: "fnfrules@gmail.com")
   end
 
   it "has many carts" do
